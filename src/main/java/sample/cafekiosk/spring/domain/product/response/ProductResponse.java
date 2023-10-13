@@ -17,7 +17,8 @@ public class ProductResponse {
 	private int price;
 
 	@Builder
-	public ProductResponse(Long id, String productNumber, ProductType type, ProductSellingStatus sellingStatus, String name,
+	public ProductResponse(Long id, String productNumber, ProductType type, ProductSellingStatus sellingStatus,
+		String name,
 		int price) {
 		this.id = id;
 		this.productNumber = productNumber;
