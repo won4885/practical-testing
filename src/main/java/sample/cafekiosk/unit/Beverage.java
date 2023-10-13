@@ -2,8 +2,8 @@ package sample.cafekiosk.unit;
 
 public interface Beverage {
 
-	int getPrice();
+    int getPrice();
 
-	String getName();
+    String getName();
 
 }
