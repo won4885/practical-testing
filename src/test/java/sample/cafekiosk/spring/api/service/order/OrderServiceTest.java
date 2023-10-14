@@ -14,6 +14,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import sample.cafekiosk.spring.api.controller.order.request.OrderCreateRequest;
@@ -45,6 +46,9 @@ class OrderServiceTest {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * Transactional을 붙여주는 것보다 이렇게 수동으로 하는 것이 일반적임
+     */
     @AfterEach
     void tearDown() {
         orderProductRepository.deleteAllInBatch();
